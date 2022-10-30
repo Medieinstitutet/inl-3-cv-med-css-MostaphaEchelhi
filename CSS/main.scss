@@ -5,10 +5,6 @@ box-sizing: border-box;
 font-family: serif; 
 }
 
-body {
-    height: 100vh;
-}
-
 header {
 background-color: #003c81c2;
 text-align: center;
@@ -28,7 +24,6 @@ text-align: center;
 }    
 .dragspel {
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-overflow: scroll;
 font-family:sans-serif;
 background-color: rgb(61, 141, 128);
 height: 100vh;
@@ -105,10 +100,4 @@ background-color: #3e3e3ec2;
                 color:white;
                 margin-bottom: 2%;
                 }
-}
-@media screen and (min-width: 1024px) {
-
-    header {
-        
-    }
 }
