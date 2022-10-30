@@ -5,10 +5,6 @@
   font-family: serif;
 }
 
-body {
-  height: 100vh;
-}
-
 header {
   background-color: rgba(0, 60, 129, 0.7607843137);
   text-align: center;
@@ -27,7 +23,6 @@ header img {
 
 .dragspel {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  overflow: scroll;
   font-family: sans-serif;
   background-color: rgb(61, 141, 128);
   height: 100vh;
@@ -100,4 +95,22 @@ footer .kontaktinfo i {
 footer a {
   color: white;
   margin-bottom: 2%;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    display: flex;
+  }
+  header {
+    width: 35vw;
+  }
+  .dragspel {
+    width: -webkit-fill-available;
+  }
+  footer {
+    height: 20vh;
+    width: 26vw;
+    position: absolute;
+    bottom: 0;
+  }
 }/*# sourceMappingURL=main.css.map */

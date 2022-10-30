@@ -101,3 +101,25 @@ background-color: #3e3e3ec2;
                 margin-bottom: 2%;
                 }
 }
+
+@media screen and  (min-width: 1024px) {
+    body {
+        display: flex;
+    }
+
+    header {
+        width: 35vw;
+    }
+
+    .dragspel {
+        width: -webkit-fill-available;
+    }
+
+    footer {
+        height: 20vh;
+        width: 26vw;
+        position: absolute;
+        bottom: 0;
+    }
+}
+    
