@@ -1,47 +1,38 @@
-@charset "UTF-8";
 * {
+  margin: 0%;
   padding: 0%;
   box-sizing: border-box;
   font-family: serif;
+}
+
+body {
+  height: 100vh;
 }
 
 header {
   background-color: rgba(0, 60, 129, 0.7607843137);
   text-align: center;
 }
-
-.namn {
+header .namn {
   font-size: 3em;
   color: white;
   margin: 0%;
 }
-
-img {
+header img {
   width: 7em;
   height: 7em;
   border: 3px solid black;
   border-radius: 50%;
 }
 
-a {
-  color: white;
-  margin-bottom: 2%;
-}
-
 .dragspel {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
+  overflow: scroll;
   font-family: sans-serif;
   background-color: rgb(61, 141, 128);
   height: 100vh;
 }
-
-.dragspel_tag,
-.dragspel_innehåll {
-  padding: 14px, 20px;
-}
-
-.dragspel_tag {
+.dragspel .dragspel_tag {
   display: block;
   color: white;
   font-size: 3em;
@@ -50,12 +41,10 @@ a {
   position: relative;
   transition: background 0.1s;
 }
-
-.dragspel_tag:hover {
+.dragspel .dragspel_tag:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
-
-.dragspel_tag::after {
+.dragspel .dragspel_tag::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -67,46 +56,48 @@ a {
   background-size: contain;
   transition: transform 0.3s;
 }
-
-.dragspel_innehåll {
+.dragspel .dragspel_1 {
   background-color: white;
   text-align: center;
   line-height: 1.6;
   font-size: 1.2em;
   display: none;
 }
-
-.dragspel_input {
+.dragspel .dragspel_input {
   display: none;
 }
-
-.dragspel_input:checked ~ .dragspel_innehåll {
+.dragspel .dragspel_input:checked ~ .dragspel_1 {
   display: block;
 }
-
-.dragspel_input:checked ~ .dragspel_tag::after {
+.dragspel .dragspel_input:checked ~ .dragspel_tag::after {
   transform: translateY(-50%) rotate(0.5turn);
 }
 
-.behållare {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.social {
+.kunskap {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
-.rubrik3 {
-  margin: 0%;
+footer {
+  background-color: rgba(62, 62, 62, 0.7607843137);
+}
+footer .rubrik {
+  display: flex;
+  justify-content: center;
   margin-bottom: 5%;
+  color: white;
 }
-
-.kontaktinfo {
+footer .kontaktinfo {
   font-size: 1em;
   color: white;
-  background-color: rgba(62, 62, 62, 0.7607843137);
   list-style: none;
   text-align: center;
-  margin: 0%;
+}
+footer .kontaktinfo i {
+  color: white;
+}
+footer a {
+  color: white;
+  margin-bottom: 2%;
 }/*# sourceMappingURL=main.css.map */
