@@ -5,6 +5,10 @@ box-sizing: border-box;
 font-family: serif; 
 }
 
+body {
+    background-color: rgb(61, 141, 128);
+}
+
 header {
 background-color: #003c81c2;
 text-align: center;
@@ -26,7 +30,7 @@ text-align: center;
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 font-family:sans-serif;
 background-color: rgb(61, 141, 128);
-height: 100vh;
+height: fit-content;
 
 
         .dragspel_tag {
@@ -102,24 +106,27 @@ background-color: #3e3e3ec2;
                 }
 }
 
-@media screen and  (min-width: 1024px) {
+@media screen and  (min-width: 512px) {
     body {
-        display: flex;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+    background: none;
     }
 
     header {
-        width: 35vw;
+    min-height: 100vh;
     }
 
     .dragspel {
-        width: -webkit-fill-available;
+    width: -webkit-fill-available;
+    list-style: inside;
+    min-height: 100vh;
     }
 
     footer {
-        height: 20vh;
-        width: 26vw;
-        position: absolute;
-        bottom: 0;
+    position: relative;
+    bottom: 9em;
+    font-size: 0.7em;
     }
-}
     
+}
