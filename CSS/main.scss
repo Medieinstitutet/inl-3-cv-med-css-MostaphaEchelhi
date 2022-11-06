@@ -1,0 +1,168 @@
+@import 'normalize';
+
+
+*{
+box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+
+img {
+    border: solid black;
+    border-radius: 20%;  
+    width: 100%;
+}
+
+.namn {
+    color: whitesmoke;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    
+    font-size: 4rem;
+}
+
+.sida_2 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: x-large;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 3%;
+    background-color: #ffffffa6;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
+
+}
+
+.intro {
+    border: solid 3px whitesmoke;
+    box-shadow: 1em 1em 1em;
+    border-radius: 5%;
+}
+
+.utbildning {
+    border: solid 3px whitesmoke;
+    box-shadow: 1em 1em 1em;
+    border-radius: 5%;
+}
+
+.erfarenhet {
+    border: solid 3px whitesmoke;
+    box-shadow: 1em 1em 1em;
+    border-radius: 5%;
+}
+
+.kompetens {
+    grid-column: 1/4;
+    ul {
+        list-style: none;
+    }    .social {
+            border: solid 3px white;
+            box-shadow: 1em 1em 1em;
+            border-radius: 5%;
+            opacity: 1;
+            position: absolute;
+            left: 10%;
+        }    .skill {   
+                border: solid 3px white;
+                box-shadow: 1em 1em 1em;
+                border-radius: 5%;
+                position: absolute;
+                right: 10%;    
+            }
+
+
+}
+
+footer {
+    text-align: center;
+    background-color: black;
+      .info {
+        display: flex;
+        justify-content: space-around;
+        color:whitesmoke;
+        list-style: none;
+        font-size: 5rem;
+        margin: 0;
+
+    }
+    
+}
+
+
+@media screen and (max-width: 1000px) {
+    header {
+        display: grid;
+        justify-items: center;
+        text-align: center;       
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+
+    .sida_2 {
+        display: block;
+        gap: 5%;   
+    }
+
+    .intro {
+        border: solid 3px whitesmoke;
+        box-shadow: 1em 1em 1em;
+        border-radius: 5%;
+        margin: 10%;
+    }
+    
+    .utbildning {
+        border: solid 3px whitesmoke;
+        box-shadow: 1em 1em 1em;
+        border-radius: 5%;
+        margin: 10%;
+    }
+    
+    .erfarenhet {
+        border: solid 3px whitesmoke;
+        box-shadow: 1em 1em 1em;
+        border-radius: 5%;
+        margin: 10%;
+    }
+    
+    .kompetens {
+        border: solid 3px whitesmoke;
+        box-shadow: 1em 1em 1em;
+        border-radius: 5%;
+        margin: 10%;
+       ul {
+            list-style: none;
+        }    .social {
+                border: solid 3px whitesmoke;
+                display: contents;
+            }   .tabell {
+                    margin-top: 5%;
+                }
+                    .skill {
+                        display: contents;   
+                    }
+    }
+    footer .info {
+        font-size: 2rem;             
+    }            
+}
+           
