@@ -1,132 +1,165 @@
-*{
-margin: 0%;
-padding: 0%;
-box-sizing: border-box;
-font-family: serif; 
-}
+@import 'normalize';
 
-body {
-    background-color: rgb(61, 141, 128);
+
+*{
+box-sizing: border-box;
 }
 
 header {
-background-color: #003c81c2;
-text-align: center;
-   .namn {
-    font-size: 3em;
-    color: white;
-    margin: 0%;
-    }
-        img {
-        width: 7em;
-        height: 7em;
-        border: 3px solid black;
-        border-radius: 50%;
-        }
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
 
+img {
+    border: solid black;
+    border-radius: 50%;  
+}
 
-}    
-.dragspel {
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-font-family:sans-serif;
-background-color: rgb(61, 141, 128);
-height: fit-content;
+.namn {
+    color: whitesmoke;
+}
 
+h1 {
+    font-size: 6rem;
+}
 
-        .dragspel_tag {
-        display: block;
-        color: white;
-        font-size: 3em;
-        font-weight: 500;
-        cursor: pointer;
-        position: relative;
-        transition: background 0.1s;
-        }   
-            .dragspel_tag:hover {
-            background-color: rgba(0, 0, 0, 0.2);
-            }
-                .dragspel_tag::after {
-                content: "";
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                right: 20px;
-                width: 12px;
-                height: 6px;
-                background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23FFFFFF99;" /></svg>');
-                background-size: contain;
-                transition: transform 0.3s;
-                }
-                        .dragspel_1 {
-                        background-color: white;
-                        text-align: center;
-                        line-height: 1.6;
-                        font-size: 1.2em;
-                        display: none;
-                        }
-                            .dragspel_input {
-                            display: none;
-                            }
-                                .dragspel_input:checked ~ .dragspel_1 {
-                                display: block;
-                                }
-                                    .dragspel_input:checked ~ .dragspel_tag::after {
-                                    transform: translateY(-50%) rotate(0.5turn); 
-                                    }
+h2 {
+    
+    font-size: 4rem;
+}
 
+.sida_2 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: x-large;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 3%;
+    background-color: #ffffffa6;
 
 }
 
-.kunskap {
-text-align: center;
-display: flex;
-flex-direction: column;
+.intro {
+    border: solid 3px whitesmoke;
+    box-shadow: 1em 1em 1em;
+    border-radius: 5%;
+}
+
+.utbildning {
+    border: solid 3px whitesmoke;
+    box-shadow: 1em 1em 1em;
+    border-radius: 5%;
+}
+
+.erfarenhet {
+    border: solid 3px whitesmoke;
+    box-shadow: 1em 1em 1em;
+    border-radius: 5%;
+}
+
+.kompetens {
+    grid-column: 1/4;
+    ul {
+        list-style: none;
+    }    .social {
+            border: solid 3px white;
+            box-shadow: 1em 1em 1em;
+            border-radius: 5%;
+            opacity: 1;
+            position: absolute;
+            left: 10%;
+        }    .skill {   
+                border: solid 3px white;
+                box-shadow: 1em 1em 1em;
+                border-radius: 5%;
+                position: absolute;
+                right: 10%;    
+            }
+
+
 }
 
 footer {
-background-color: #3e3e3ec2;
-   .rubrik {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 5%;
-    color: white;
-    }   .kontaktinfo {
-        font-size: 1em;
-        color: white;
+    text-align: center;
+    background-color: black;
+      .info {
+        display: flex;
+        justify-content: space-around;
+        color:whitesmoke;
         list-style: none;
-        text-align: center;
+        font-size: 5rem;
+        margin: 0;
 
-            i {
-            color: white;
-            }
-            
-        }       a {
-                color:white;
-                margin-bottom: 2%;
-                }
-}
-
-@media screen and  (min-width: 512px) {
-    body {
-    display: grid;
-    grid-template-columns: 0.5fr 2fr;
-    background: none;
-    }
-
-    header {
-    min-height: 100vh;
-    }
-
-    .dragspel {
-    width: -webkit-fill-available;
-    list-style: inside;
-    min-height: 100vh;
-    }
-
-    footer {
-    position: relative;
-    bottom: 9em;
-    font-size: 0.7em;
     }
     
 }
+
+
+@media screen and (max-width: 1000px) {
+    header {
+        display: grid;
+        justify-items: center;
+        text-align: center;       
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+
+    .sida_2 {
+        display: block;
+        gap: 5%;   
+    }
+
+    .intro {
+        border: solid 3px whitesmoke;
+        box-shadow: 1em 1em 1em;
+        border-radius: 5%;
+        margin: 10%;
+    }
+    
+    .utbildning {
+        border: solid 3px whitesmoke;
+        box-shadow: 1em 1em 1em;
+        border-radius: 5%;
+        margin: 10%;
+    }
+    
+    .erfarenhet {
+        border: solid 3px whitesmoke;
+        box-shadow: 1em 1em 1em;
+        border-radius: 5%;
+        margin: 10%;
+    }
+    
+    .kompetens {
+        border: solid 3px whitesmoke;
+        box-shadow: 1em 1em 1em;
+        border-radius: 5%;
+        margin: 10%;
+       ul {
+            list-style: none;
+        }    .social {
+                border: solid 3px whitesmoke;
+                display: contents;
+            }   .tabell {
+                    margin-top: 5%;
+                }
+                    .skill {
+                        display: contents;   
+                    }
+    }
+    footer .info {
+        font-size: 2rem;             
+    }            
+}
+           
